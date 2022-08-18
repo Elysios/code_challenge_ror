@@ -1,53 +1,53 @@
-# Desafio programação - para vaga desenvolvedor Ruby on Rails
+# Desafio programação - vaga desenvolvedor Ruby on Rails
 
-Por favor leiam este documento do começo ao fim, com muita atenção. O intuito deste teste é avaliar seus conhecimentos técnicos, para ser mais específico em Ruby on Rails. O teste consiste em ... / ... / ... Este desafio deve ser feito por você. Gaste o tempo que você quiser, porém normalmente você não deve precisar de mais do que algumas horas.
+O objetivo deste teste é avaliar seus conhecimentos técnicos e domínio em Ruby on Rails, por isso deve ser feito por você. Você tem uma semana para entregar, se precisar de mais tempo entre em contato para nos informar. Leia as instruções com atenção!
 
-# Instruções de entrega do desafio
+## Descrição do projeto
 
-1. Primeiro, faça um fork deste projeto para sua conta no Github (crie uma se você não possuir).
-2. Em seguida, implemente o projeto tal qual descrito abaixo, em seu clone local.
-3. Por fim, envie via email o projeto ou o fork/link do projeto para seu contato na Elysios.
+O desafio consiste na criação de uma aplicação que contenha duas entidades:
+ - Contatos comerciais, que podem ser clientes ou fornecedores contendo os atributos:
+    - Nome
+    - tipo - cliente | fornecedor
+    - Email - com validação de formato e unicidade no modelo
+ - Propriedades produtivas, com os atributos:
+    - Nome
 
-# Descrição do projeto
+As entidades devem se relacionar da seguinte forma: Caso o contato comercial seja um fornecedor, pode ter até 3 propriedades. Clientes não tem nenhuma.
+Ao excluir um fornecedor as propriedades pertencentes a ele devem ser excluídas tambem.
 
-... / ... / ...
+A aplicação deve ter pelo menos as seguintes telas:
+- Uma tela principal de listagem dos contatos comerciais, a partir da qual se pode excluir contatos, acessar os detalhes de cada contato, e acesso a tela de criação de novo contato. A lista deve exibir o nome dos contatos e ser ordenada pelo primeiro nome.
+- Uma tela de novo registro, contendo um formulário simples de criação de contatos.
+- Uma tela de detalhes de contato. Essa tela deve conter, CASO SEJA UM FORNECEDOR, uma seção de propriedades, contendo a lista das propriedades (é uma lista breve, pois terá no máximo 3) que pertencem ao contato e uma interação para adicionar novas. Na lista deve ser possível editar o nome da propriedade ou excluí-la.
 
-**Sua aplicação web DEVE:**
+**Algumas observações:**
 
-1. ... / ... / ...
-2. ... / ... / ...
-3. ... / ... / ...
-4. Ser escrita obrigatoriamente em Ruby 2.0+ e Rails 5+ ???
-5. Ser simples de configurar e rodar, funcionando em ambiente compatível com Unix (Linux ou Mac OS X). Ela deve utilizar apenas linguagens e bibliotecas livres ou gratuitas.
-6. Git com commits bem descritos
-7. MySQL
-8. RUBOCOP???
-9. RSPEC???
-10. Simplecov para disponibilizar o code coverage ???
-11. Docker compose (Pontos extras se utilizar) ???
-12. Readme file descrevendo bem o projeto e seu setup
-13. Incluir informação descrevendo como consumir o endpoint da API
+Quanto aos estilos, preocupe-se com o conteúdo, a estilização pode ser apenas o mínimo necessário para organizar as informações de uma forma clara e compreensível.
 
-**Sua aplicação web não precisa:**
+Essas são as funcionalidades básicas que sua aplicação deve conter, sinta-se à vontade para adicionar recursos, se achar que faz sentido.
 
-1. Lidar com autenticação ou autorização (pontos extras se ela fizer, mais pontos extras se a autenticação for feita via OAuth).
-2. Ser escrita usando algum framework específico (mas não há nada errado em usá-los também, use o que achar melhor).
-3. Documentação da api.(Será um diferencial e pontos extras se fizer)
+**Requisitos:**
+
+- A aplicação deve ser escrita em Ruby 2.0+ e Rails 5+
+- Deve utilizar apenas linguagens e bibliotecas livres ou gratuitas
+- Os commits devem ser descritivos
+- Utilize banco MySQL
+- Aplique testes unitários com RSPEC
+- Readme descrevendo o projeto e seu setup
+
+## Instruções de entrega do desafio
+
+1. Ao finalizar seu projeto crie um repositório privado no github e dê acesso a @matheuscschenfeld
+2. Envie via email o link do projeto para seu contato na Elysios com o título "[Rails dev] + seu nome"
+3. Adicione ao readme uma breve descrição do que você fez e o passo a passo para subir a aplicação. Se você fizer o deploy são pontos extras! Caso o faça disponibilize também o link na descrição.
+
 
 # Avaliação
 
-Seu projeto será avaliado de acordo com os seguintes critérios.
-
-1. Sua aplicação preenche os requerimentos básicos?
-2. Você documentou a maneira de configurar o ambiente e rodar sua aplicação?
-3. Você seguiu as instruções de envio do desafio?
+1. A aplicação deve conter as funcionalidades descritas e respeitar/atender as tecnologias requeridas;
+2. Qualidade do seu código e estrutura do projeto;
+3. As instruções de entrega devem ser seguidas conforme descrito bem como a apresentação do projeto no arquivo readme;
 4. Qualidade e cobertura dos testes unitários.
-
-Adicionalmente, tentaremos verificar a sua familiarização com as bibliotecas padrões (standard libs), bem como sua experiência com programação orientada a objetos a partir da estrutura de seu projeto.
-
-# Referência
-
-Este desafio foi baseado neste outro desafio: https://github.com/lschallenges/data-engineering
 
 ---
 
