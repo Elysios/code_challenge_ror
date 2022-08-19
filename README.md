@@ -4,21 +4,35 @@ O objetivo deste teste é avaliar seus conhecimentos técnicos e domínio em Rub
 
 ## Descrição do projeto
 
-O desafio consiste na criação de uma aplicação que contenha duas entidades:
+O desafio consiste na criação de uma aplicação que contenha três entidades:
  - Contatos comerciais, que podem ser clientes ou fornecedores contendo os atributos:
     - Nome
     - tipo - cliente | fornecedor
     - Email - com validação de formato e unicidade no modelo
  - Propriedades produtivas, com os atributos:
     - Nome
+    - Área
+    - Espécie de planta
+    - N° de plantas
+    - Espaçamento entre fileiras 
+      - Unidade de medida: centímetro ou metro.
+    - Espaçamento entre plantas
+      - Unidade de medida: centímetro ou metro.
+ - Especie de planta
+    - Nome
 
+### Informações: 
 As entidades devem se relacionar da seguinte forma: Caso o contato comercial seja um fornecedor, pode ter até 3 propriedades. Clientes não tem nenhuma.
 Ao excluir um fornecedor as propriedades pertencentes a ele devem ser excluídas tambem.
+Uma propriedade pode ter N espécies de plantas e uma espécie de planta pode estar em N propriedades.      
+O número de plantas deve ser calculado automaticamente utilizando o espaçamento entre fileiras e plantas com a fórmula: <b>nº de plantas = Área / (Espaçamento entre fileiras * Espaçamento entre plantas)</b>. Dica: converter a área para metro quadrado e também passar os espaçamentos para metros para o cálculo
+
+![Espaçamento entre filas e plantas](espaço-entre-plantas-.jpeg)
 
 A aplicação deve ter pelo menos as seguintes telas:
 - Uma tela principal de listagem dos contatos comerciais, a partir da qual se pode excluir contatos, acessar os detalhes de cada contato, e acesso a tela de criação de novo contato. A lista deve exibir o nome dos contatos e ser ordenada pelo primeiro nome.
 - Uma tela de novo registro, contendo um formulário simples de criação de contatos.
-- Uma tela de detalhes de contato. Essa tela deve conter, CASO SEJA UM FORNECEDOR, uma seção de propriedades, contendo a lista das propriedades (é uma lista breve, pois terá no máximo 3) que pertencem ao contato e uma interação para adicionar novas. Na lista deve ser possível editar o nome da propriedade ou excluí-la.
+- Uma tela de detalhes de contato. Essa tela deve conter, CASO SEJA UM FORNECEDOR, uma seção de propriedades, contendo a lista das propriedades (é uma lista breve, pois terá no máximo 3) que pertencem ao contato e uma interação para adicionar novas propriedades. Na lista deve ser possível editar os atributos da propriedade ou excluí-la.
 
 **Algumas observações:**
 
@@ -37,7 +51,8 @@ Essas são as funcionalidades básicas que sua aplicação deve conter, sinta-se
 
 ## Instruções de entrega do desafio
 
-1. Ao finalizar seu projeto crie um repositório privado no github e dê acesso a @matheuscschenfeld
+1. Ao finalizar seu projeto crie um repositório no github
+ - Se for privado dê acesso a @matheuscschenfeld
 2. Envie via email o link do projeto para seu contato na Elysios com o título "[Rails dev] + seu nome"
 3. Adicione ao readme uma breve descrição do que você fez e o passo a passo para subir a aplicação. Se você fizer o deploy são pontos extras! Caso o faça disponibilize também o link na descrição.
 
