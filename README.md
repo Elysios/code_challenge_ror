@@ -25,7 +25,7 @@ O desafio consiste na criação de uma aplicação que contenha três entidades:
 As entidades devem se relacionar da seguinte forma: Caso o contato comercial seja um fornecedor, pode ter até 3 propriedades. Clientes não tem nenhuma.
 Ao excluir um fornecedor as propriedades pertencentes a ele devem ser excluídas tambem.
 Uma propriedade pode ter N espécies de plantas e uma espécie de planta pode estar em N propriedades.      
-O número de plantas deve ser calculado automaticamente utilizando o espaçamento entre fileiras e plantas com a fórmula: <b>nº de plantas = Área / (Espaçamento entre fileiras * Espaçamento entre plantas)</b>. Dica: converter a área para metro quadrado e também passar os espaçamentos para metros para o cálculo
+O número de plantas deve ser calculado automaticamente utilizando o espaçamento entre fileiras e plantas com a fórmula: <b>nº de plantas = Área / (Espaçamento entre fileiras * Espaçamento entre plantas)</b>. Dica: converter a área para metro quadrado e também passar os espaçamentos para metros no o cálculo
 
 ![Espaçamento entre filas e plantas](espaço-entre-plantas-.jpeg)
 
